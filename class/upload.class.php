@@ -21,7 +21,7 @@ class UploadImage
     public function Upload()
     {
         if (empty($this->imgName)) return 0;
-        $isuploaded =  move_uploaded_file($this->imgTemp, "../uploads/" . $this->imgName);
+        $isuploaded =  move_uploaded_file($this->imgTemp, "../../uploads/" . $this->imgName);
         if ($isuploaded) return 1;
         return 0;
     }

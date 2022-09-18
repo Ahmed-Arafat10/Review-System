@@ -89,13 +89,13 @@ class User{
      * @param $temp
      * @return array|false
      */
-    public function GetUsers($extra,$text, $temp)
+    public function GetUsers($extra, $text, $temp)
     {
         $insert = "SELECT * FROM `user` ";
         if($extra != NULL) $insert .= $extra;
         $query = $this->con->prepare($insert);
         if($text == "signin") $query->bind_param("ss",$temp[0],$temp[1]);
-        if($text == "id") $query->bind_param("i",$temp[0]);
+        if($text == "id") $query->bind_param("i",$temp);
         $Check = $query->execute();
         if($Check) {
             $Result = $query->get_result();

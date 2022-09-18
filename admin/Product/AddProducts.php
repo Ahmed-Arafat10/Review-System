@@ -1,7 +1,8 @@
 <?php
-require_once "../include/Config.php";
-require_once "../class/product.class.php";
-require_once "../class/upload.class.php";
+require_once "../../include/Config.php";
+require_once "../../class/product.class.php";
+require_once "../../class/upload.class.php";
+
 if (!IsLoggedIn()) exit("Please log in first");
 
 
@@ -27,8 +28,8 @@ if (count($_POST)) {
     $p->AddProduct($title, $description, $img[0], $price, $available, $ID);
 }
 
-require_once "../templates/admin/header.html";
-require_once "../templates/admin/add-product.html";
-// require_once "../templates/admin/menu.html";
-// require_once "../templates/admin/index.html";
-// require_once "../templates/admin/footer.html";
+require_once "../../templates/admin/header.html";
+require_once "../../templates/admin/menu.html";
+require_once "../../templates/admin/footer.html";
+require_once "../../templates/admin/add-product.html";
+//  require_once "../../templates/admin/index.html";

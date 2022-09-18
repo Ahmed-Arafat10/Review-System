@@ -15,20 +15,20 @@
 
             <?php if(strlen($success)>0) { ?>
             <div class="alert alert-success">
-                <p><?php echo $success; ?> to view users <a href="users.php">click here</a> </p>
+                <p><?php echo $success; ?> to view users <a href="AllUsers.php">click here</a> </p>
             </div>
             <?php }else{ ?>
 
         </div>
 
-        <?php if($idFromUrl > 0) { ?>
+       
         <div class="col-md-8">
-            <form class="form-horizontal" action="updateuser.php" method="post">
+            <form class="form-horizontal" method="post">
 
                 <div class="form-group">
                     <label for="username" class="col-sm-3 control-label">Username</label>
                     <div class="col-sm-9">
-                        <input type="text" name="username" class="form-control" id="username" value="<?php echo $user['username']; ?>" placeholder="Username">
+                        <input type="text" name="name" class="form-control" id="username" value="<?php echo $name ?>" placeholder="Username">
                     </div>
                 </div>
 
@@ -36,7 +36,7 @@
                 <div class="form-group">
                     <label for="email-address" class="col-sm-3 control-label">Email Address</label>
                     <div class="col-sm-9">
-                        <input type="text" name="email" class="form-control" id="email-address"  value="<?php echo $user['email']; ?>"  placeholder="Email Address">
+                        <input type="text" name="email" class="form-control" id="email-address"  value="<?php echo $email ?>"  placeholder="Email Address">
                     </div>
                 </div>
 
@@ -44,10 +44,10 @@
                 <div class="form-group">
                     <label for="password" class="col-sm-3 control-label">Password</label>
                     <div class="col-sm-9">
-                        <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+                        <input type="password" name="password" value="<?php echo $password ?>"  class="form-control" id="password" placeholder="Password">
                     </div>
                 </div>
-                <input type="hidden" name="id" class="form-control" value="<?php echo $user['id']; ?>">
+              
 
                 <div class="form-group">
                     <div class="col-sm-offset-3 col-sm-9">
@@ -56,7 +56,7 @@
                 </div>
             </form>
         </div>
-        <?php } ?>
+
 
 
     </div>

@@ -26,10 +26,7 @@ class Message
         $query = $this->con->prepare($insert);
         $query->bind_param("ssss", $title, $content, $name, $email);
         $Check = $query->execute();
-        if ($Check) {
-            echo "Done Adding New Message";
-            return 1;
-        }
+        if ($Check) return 1;
         echo "Something Went Wrong";
         return 0;
     }
@@ -44,12 +41,12 @@ class Message
      * @param $email
      * @return bool
      */
-    public function UpdateMessage($ID, $title, $content, $name, $email)
+    public function UpdateMessage($ID, $title, $content)
     {
-        $update = "UPDATE `message` SET `title` = ? ,  `content` = ? , `name` = ? ,  `email` = ?
+        $update = "UPDATE `message` SET `title` = ? ,  `content` = ? 
         WHERE `ID` = ?";
         $query = $this->con->prepare($update);
-        $query->bind_param("ssssi", $title, $content, $name, $email, $ID);
+        $query->bind_param("ssi", $title, $content,$ID);
         $Check = $query->execute();
         if ($Check) {
             echo "Done Updating Your Message";

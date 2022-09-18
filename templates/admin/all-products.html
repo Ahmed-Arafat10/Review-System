@@ -33,10 +33,10 @@
                     <td class="product-price"><?php echo $price; ?></td>
                     <td class="product-desc"><?php echo $description; ?></td>
                     <td class="product-available"><?php echo ($available == 1)? 'Available':'Not Available'; ?></td>
-                    <td class="product-image"><img src="../uploads/<?php echo $image; ?>" alt=""></td>
+                    <td class="product-image"><img src="../../uploads/<?php echo $image; ?>" alt=""></td>
                     <td class="product-options">
-                        <a href="UpdateProducts.php?ID=<?php echo $ID; ?>" class="btn btn-success">Edit</a>
-                        <a href="DeleteProducts.php?ID=<?php echo $ID; ?>" class="btn btn-danger">Delete</a>
+                        <a href="UpdateProduct.php?ID=<?php echo $ID; ?>" class="btn btn-success">Edit</a>
+                        <a href="DeleteProduct.php?ID=<?php echo $ID; ?>" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
                 <?php } ?>

@@ -1,5 +1,6 @@
 <?php
-require_once "../class/product.class.php";
+require_once "../../include/Config.php";
+require_once "../../class/product.class.php";
 
 
 $p = new Product();
@@ -15,5 +16,7 @@ $allProducts = $p->GetProducts("","",NULL);
 
 // $arr1 = $p->GetProduct("WHERE `ID` = ?","id",4);
 // print_r($arr1);
-require_once "../templates/admin/header.html";
-require_once "../templates/admin/all-products.html";
+require_once "../../templates/admin/header.html";
+require_once "../../templates/admin/menu.html";
+require_once "../../templates/admin/footer.html";
+require_once "../../templates/admin/all-products.html";

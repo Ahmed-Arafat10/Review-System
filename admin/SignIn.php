@@ -5,6 +5,7 @@ require_once '../include/Config.php';
 //$Check = $user->GetUsers("","","");
 
 if (IsLoggedIn()) exit("Already logged in");
+
 $error = NULL;
 $success = NULL;
 if (count($_POST)) {
