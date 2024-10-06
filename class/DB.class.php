@@ -5,7 +5,7 @@ class DB
     private const host = "localhost";
     private const username = "root";
     private const password = "";
-    private const database = "review";
+    private const database = "review_system_practice";
     private $connect;
 
     public function __construct()

@@ -1,10 +1,11 @@
-<?php
+_<?php
 require_once "class/product.class.php";
 if (!isset($_GET['ID'])) exit("No ID Is Found");
 $ID = $_GET['ID'];
 $Product = new Product();
 $Data = $Product->GetProduct("WHERE `ID` = ?", "id", $ID);
 extract($Data);
+$select = 1;
 ?>
 <?php require_once "header.html"; ?>
 </div>
