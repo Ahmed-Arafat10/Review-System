@@ -83,7 +83,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`ID`, `name`, `password`, `email`) VALUES
 (2, 'ahmed', '123', 'ahned@gmail.com'),
-(3, 'aaaaa', '123', 'ahmedxarafat0101@gmail.com');
+(3, 'aaaaa', '123', 'arafat.software.engineer@gmail.com');
 
 --
 -- Indexes for dumped tables
